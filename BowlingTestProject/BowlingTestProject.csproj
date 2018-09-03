@@ -51,6 +51,7 @@
     <Compile Include="CalculateTotalScoreTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculateFrameScoreTest.cs" />
+    <Compile Include="CalculateSpareValueTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
