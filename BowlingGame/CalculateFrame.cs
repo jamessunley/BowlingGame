@@ -6,17 +6,20 @@ namespace BowlingGame
     {
         public FrameObject CalculateFrameScore(FrameObject frame)
         {
+            frame.score = frame.bowl1 + frame.bowl2;
+
             if (frame.bowl1 == 10)
             {
-                frame = new FrameObject { score = frame.bowl1 + frame.bowl2, wasSpare = false, wasStrike = true };
+                frame.wasStrike = true;
                 return frame;
             }
-            else if (frame.bowl2 + frame.bowl1 == 10)
+
+            if (frame.score == 10)
             {
-                frame = new FrameObject { score = frame.bowl1 + frame.bowl2, wasSpare = true, wasStrike = false };
+                frame.wasSpare = true;
                 return frame;
             }
-            frame = new FrameObject { score = frame.bowl1 + frame.bowl2, wasSpare = false, wasStrike = false };
+
             return frame;
         }
     }
