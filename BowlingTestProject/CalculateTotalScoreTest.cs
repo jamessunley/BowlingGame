@@ -132,5 +132,4 @@ namespace BowlingTestProject
             Assert.AreEqual(0, total);
         }
     }
-    
 }
