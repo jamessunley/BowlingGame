@@ -580,5 +580,119 @@ namespace BowlingTestProject
             //then the second frame total score will be 21
             Assert.AreEqual(21, frame2.score);
         }
+
+        [TestMethod]
+        public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_5_then_first_strike_total_is_25()
+        {
+            //given I have a list of frames
+            List<FrameObject> frameList = new List<FrameObject>();
+            FrameObject frame1;
+            FrameObject frame2;
+            FrameObject frame3;
+            FrameObject frame4;
+            frame1 = new FrameObject();
+            frame2 = new FrameObject();
+            frame3 = new FrameObject();
+            frame4 = new FrameObject();
+            //and the second frame total score is 10
+            frame2.score = 10;
+            //and the strike bool for the second frame is true
+            frame2.wasStrike = true;
+            //and the third frame total score is 10
+            frame3.score = 10;
+            //and the strike bool for the third frame is true
+            frame3.wasStrike = true;
+            //and the fourth frame bowl1 score is 5
+            frame4.bowl1 = 5;
+            //and the fourth frame strike bool is false
+            frame4.wasStrike = false;
+            //and the fourth frame spare bool is false
+            frame4.wasSpare = false;
+            //when the update strike score is called
+            frameList.Add(frame1);
+            frameList.Add(frame2);
+            frameList.Add(frame3);
+            frameList.Add(frame4);
+            ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
+            frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
+            //then the second frame total score will be 25
+            Assert.AreEqual(25, frame2.score);
+        }
+
+        [TestMethod]
+        public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_0_then_first_strike_total_is_20()
+        {
+            //given I have a list of frames
+            List<FrameObject> frameList = new List<FrameObject>();
+            FrameObject frame1;
+            FrameObject frame2;
+            FrameObject frame3;
+            FrameObject frame4;
+            frame1 = new FrameObject();
+            frame2 = new FrameObject();
+            frame3 = new FrameObject();
+            frame4 = new FrameObject();
+            //and the second frame total score is 10
+            frame2.score = 10;
+            //and the strike bool for the second frame is true
+            frame2.wasStrike = true;
+            //and the third frame total score is 10
+            frame3.score = 10;
+            //and the strike bool for the third frame is true
+            frame3.wasStrike = true;
+            //and the fourth frame bowl1 score is 0
+            frame4.bowl1 = 0;
+            //and the fourth frame strike bool is false
+            frame4.wasStrike = false;
+            //and the fourth frame spare bool is false
+            frame4.wasSpare = false;
+            //when the update strike score is called
+            frameList.Add(frame1);
+            frameList.Add(frame2);
+            frameList.Add(frame3);
+            frameList.Add(frame4);
+            ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
+            frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
+            //then the second frame total score will be 20
+            Assert.AreEqual(20, frame2.score);
+        }
+
+        [TestMethod]
+        public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_10_then_first_strike_total_is_30()
+        {
+            //given I have a list of frames
+            List<FrameObject> frameList = new List<FrameObject>();
+            FrameObject frame1;
+            FrameObject frame2;
+            FrameObject frame3;
+            FrameObject frame4;
+            frame1 = new FrameObject();
+            frame2 = new FrameObject();
+            frame3 = new FrameObject();
+            frame4 = new FrameObject();
+            //and the second frame total score is 10
+            frame2.score = 10;
+            //and the strike bool for the second frame is true
+            frame2.wasStrike = true;
+            //and the third frame total score is 10
+            frame3.score = 10;
+            //and the strike bool for the third frame is true
+            frame3.wasStrike = true;
+            //and the fourth frame bowl1 score is 10
+            frame4.bowl1 = 10;
+            //and the fourth frame strike bool is false
+            frame4.wasStrike = true;
+            //and the fourth frame spare bool is false
+            frame4.wasSpare = false;
+            //when the update strike score is called
+            frameList.Add(frame1);
+            frameList.Add(frame2);
+            frameList.Add(frame3);
+            frameList.Add(frame4);
+            ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
+            frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
+            //then the second frame total score will be 30
+            Assert.AreEqual(30, frame2.score);
+        }
     }
 }
