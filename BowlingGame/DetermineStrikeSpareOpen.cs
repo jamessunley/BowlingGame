@@ -4,16 +4,20 @@ namespace BowlingGame
 {
     public class DetermineStrikeSpareOpen : IDetermineStrikeSpareOpen
     {
-        public string CalculateFrameScore(FrameObject frame1)
+        public FrameObject CalculateFrameScore(FrameObject frame)
         {
-            if (frame1.wasSpare)
+            if (frame.bowl1 == 10)
             {
-                return "Spare";
-            }else if(frame1.wasStrike)
-            {
-                return "Strike";
+                frame.wasStrike = true;
+                return frame;
             }
-            return "Open";
+
+            if (frame.score == 10)
+            {
+                frame.wasSpare = true;
+                return frame;
+            }
+            return frame;
         }
     }
 }

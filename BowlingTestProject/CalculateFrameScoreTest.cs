@@ -20,10 +20,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 1
             Assert.AreEqual(1, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -37,10 +33,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 1
             Assert.AreEqual(1, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -54,10 +46,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 1
             Assert.AreEqual(2, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -71,10 +59,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 9
             Assert.AreEqual(9, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -88,10 +72,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 9
             Assert.AreEqual(9, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -105,10 +85,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 9
             Assert.AreEqual(9, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
         [TestMethod]
@@ -122,10 +98,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 10
             Assert.AreEqual(10, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(true, frame.wasSpare);
         }
 
         [TestMethod]
@@ -139,10 +111,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 10
             Assert.AreEqual(10, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(true, frame.wasSpare);
         }
 
         [TestMethod]
@@ -156,10 +124,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 10
             Assert.AreEqual(10, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(true, frame.wasSpare);
         }
 
         [TestMethod]
@@ -173,10 +137,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 10
             Assert.AreEqual(10, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(false, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(true, frame.wasSpare);
         }
 
         [TestMethod]
@@ -190,10 +150,6 @@ namespace BowlingTestProject
             frame = calculateFrame.CalculateFrameScore(frame);
             //then i will get back a score of 10
             Assert.AreEqual(10, frame.score);
-            //and the strike bool being false
-            Assert.AreEqual(true, frame.wasStrike);
-            //and the spare bool being false
-            Assert.AreEqual(false, frame.wasSpare);
         }
 
     }

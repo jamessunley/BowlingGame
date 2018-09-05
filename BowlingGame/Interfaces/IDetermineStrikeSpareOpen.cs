@@ -4,6 +4,6 @@ namespace BowlingGame
 {
     public interface IDetermineStrikeSpareOpen
     {
-        string CalculateFrameScore(FrameObject frame1);
+        FrameObject CalculateFrameScore(FrameObject frame1);
     }
 }

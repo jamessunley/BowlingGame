@@ -51,7 +51,7 @@
     <Compile Include="CalculateTotalScoreTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CalculateFrameScoreTest.cs" />
-    <Compile Include="CalculateSpareValueTests.cs" />
+    <Compile Include="CalculateSpareScoreTests.cs" />
     <Compile Include="CalculateStrikeScoreTest.cs" />
     <Compile Include="DetermineStrikeSpareOrOpenTest.cs" />
     <Compile Include="DetermineAdditionalBowlsTest.cs" />

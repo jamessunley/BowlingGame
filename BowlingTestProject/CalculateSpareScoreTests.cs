@@ -7,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace BowlingTestProject
 {
     [TestClass]
-    public class CalculateSpareValueTests
+    public class CalculateSpareScoreTests
     {
         [TestMethod]
         public void Given_I_have_a_list_of_frames_where_the_first_frame_is_a_spare_and_the_second_frame_first_bowl_is_1_I_will_get_back_a_list_of_frames_the_score_of_the_spare_is_11()
