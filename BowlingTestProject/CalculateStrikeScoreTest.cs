@@ -13,11 +13,8 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_has_a_score_of_1_then_strike_total_is_11()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -29,8 +26,7 @@ namespace BowlingTestProject
             //and the second frame spare bool is false
             frame2.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the first frame total score will be 11
@@ -41,11 +37,8 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_has_a_score_of_5_then_strike_total_is_15()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -57,8 +50,7 @@ namespace BowlingTestProject
             //and the second frame spare bool is false
             frame2.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the first frame total score will be 15
@@ -69,11 +61,8 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_has_a_score_of_0_then_strike_total_is_10()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -85,8 +74,7 @@ namespace BowlingTestProject
             //and the second frame spare bool is false
             frame2.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the first frame total score will be 10
@@ -97,11 +85,8 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_has_a_score_of_10_and_is_a_spare_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -113,8 +98,7 @@ namespace BowlingTestProject
             //and the second frame spare bool is true
             frame2.wasSpare = true;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the first frame total score will be 20
@@ -125,11 +109,8 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_has_a_score_of_10_and_is_a_strike_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -141,8 +122,7 @@ namespace BowlingTestProject
             //and the second frame spare bool is false
             frame2.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2};
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the first frame total score will be 20
@@ -153,13 +133,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_has_a_score_of_1_then_strike_total_is_11()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -171,9 +147,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 11
@@ -184,13 +158,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_has_a_score_of_5_then_strike_total_is_15()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -202,9 +172,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 15
@@ -215,13 +183,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_has_a_score_of_0_then_strike_total_is_10()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -233,9 +197,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 10
@@ -246,13 +208,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_has_a_score_of_10_and_it_is_a_spare_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -264,9 +222,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is true
             frame3.wasSpare = true;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -277,13 +233,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_has_a_score_of_10_and_it_is_a_strike_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -295,9 +247,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -308,13 +258,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_is_a_strike_and_third_frame_first_bowl_is_a_1_then_first_strike_total_is_21()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -330,9 +276,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 21
@@ -343,13 +287,9 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_second_frame_is_a_strike_and_third_frame_first_bowl_is_a_5_then_first_strike_total_is_25()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
             //and the first frame total score is 10
             frame1.score = 10;
             //and the strike bool for the first frame is true
@@ -365,9 +305,7 @@ namespace BowlingTestProject
             //and the third frame spare bool is false
             frame3.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 25
@@ -378,15 +316,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_has_a_score_of_1_then_strike_total_is_11()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -398,10 +331,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 11
@@ -412,15 +342,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_has_a_score_of_5_then_strike_total_is_15()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -432,10 +357,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 15
@@ -446,15 +368,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_has_a_score_of_0_then_strike_total_is_10()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -466,10 +383,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 10
@@ -480,15 +394,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_has_a_score_of_10_and_is_a_spare_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -500,10 +409,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = true;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -514,15 +420,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_has_a_score_of_10_and_is_a_strike_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -534,10 +435,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -548,15 +446,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_1_then_first_strike_total_is_21()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -572,10 +465,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 21
@@ -586,15 +476,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_5_then_first_strike_total_is_25()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -610,10 +495,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 25
@@ -624,15 +506,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_0_then_first_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -648,10 +525,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4};
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -662,15 +536,10 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_third_frame_is_a_strike_and_fourth_frame_first_bowl_is_a_10_then_first_strike_total_is_30()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
             //and the second frame total score is 10
             frame2.score = 10;
             //and the strike bool for the second frame is true
@@ -686,10 +555,7 @@ namespace BowlingTestProject
             //and the fourth frame spare bool is false
             frame4.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 30
@@ -700,17 +566,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fifth_frame_has_a_score_of_1_then_strike_total_is_11()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the fourth frame total score is 10
             frame4.score = 10;
             //and the strike bool for the fourth frame is true
@@ -722,11 +582,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 11
@@ -737,17 +593,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fifth_frame_has_a_score_of_5_then_strike_total_is_15()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the fourth frame total score is 10
             frame4.score = 10;
             //and the strike bool for the fourth frame is true
@@ -759,11 +609,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 15
@@ -774,17 +620,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fifth_frame_has_a_score_of_0_then_strike_total_is_10()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the fourth frame total score is 10
             frame4.score = 10;
             //and the strike bool for the fourth frame is true
@@ -796,11 +636,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 10
@@ -811,17 +647,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fifth_frame_has_a_score_of_10_and_is_spare_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the fourth frame total score is 10
             frame4.score = 10;
             //and the strike bool for the fourth frame is true
@@ -833,11 +663,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = true;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -848,17 +674,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fifth_frame_has_a_score_of_10_and_is_strike_then_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the fourth frame total score is 10
             frame4.score = 10;
             //and the strike bool for the fourth frame is true
@@ -870,11 +690,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -885,17 +701,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_is_a_strike_and_fifth_frame_first_bowl_is_a_1_then_first_strike_total_is_21()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -911,11 +721,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 21
@@ -926,17 +732,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_is_a_strike_and_fifth_frame_first_bowl_is_a_5_then_first_strike_total_is_25()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -952,11 +752,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 25
@@ -967,17 +763,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_is_a_strike_and_fifth_frame_first_bowl_is_a_0_then_first_strike_total_is_20()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -993,11 +783,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5 };
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 20
@@ -1008,17 +794,11 @@ namespace BowlingTestProject
         public void Given_I_have_a_list_of_frames_and_one_is_a_strike_and_the_fourth_frame_is_a_strike_and_fifth_frame_first_bowl_is_a_10_then_first_strike_total_is_30()
         {
             //given I have a list of frames
-            List<FrameObject> frameList = new List<FrameObject>();
-            FrameObject frame1;
-            FrameObject frame2;
-            FrameObject frame3;
-            FrameObject frame4;
-            FrameObject frame5;
-            frame1 = new FrameObject();
-            frame2 = new FrameObject();
-            frame3 = new FrameObject();
-            frame4 = new FrameObject();
-            frame5 = new FrameObject();
+            FrameObject frame1 = new FrameObject();
+            FrameObject frame2 = new FrameObject();
+            FrameObject frame3 = new FrameObject();
+            FrameObject frame4 = new FrameObject();
+            FrameObject frame5 = new FrameObject();
             //and the third frame total score is 10
             frame3.score = 10;
             //and the strike bool for the third frame is true
@@ -1034,11 +814,7 @@ namespace BowlingTestProject
             //and the fifth frame spare bool is false
             frame5.wasSpare = false;
             //when the update strike score is called
-            frameList.Add(frame1);
-            frameList.Add(frame2);
-            frameList.Add(frame3);
-            frameList.Add(frame4);
-            frameList.Add(frame5);
+            List<FrameObject> frameList = new List<FrameObject>() { frame1, frame2, frame3, frame4, frame5};
             ICalculateStrikeScore calculateUpdatedFrame = new CalculateStrikeScore();
             frameList = calculateUpdatedFrame.CalculateFrameScore(frameList);
             //then the second frame total score will be 30
