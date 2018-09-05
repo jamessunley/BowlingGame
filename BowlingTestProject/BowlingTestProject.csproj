@@ -54,6 +54,7 @@
     <Compile Include="CalculateSpareValueTests.cs" />
     <Compile Include="CalculateStrikeScoreTest.cs" />
     <Compile Include="DetermineStrikeSpareOrOpenTest.cs" />
+    <Compile Include="DetermineAdditionalBowlsTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
