@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BowlingGame;
 using BowlingGame.FrameModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

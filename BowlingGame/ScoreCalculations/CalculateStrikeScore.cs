@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using BowlingGame;
 using BowlingGame.FrameModel;
 
 namespace BowlingTestProject

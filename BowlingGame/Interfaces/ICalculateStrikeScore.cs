@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using BowlingGame.FrameModel;
 
-namespace BowlingTestProject
+namespace BowlingGame
 {
     public interface ICalculateStrikeScore
     {
